@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% extends 'index.html' %}
+{% block content %}
+<section class="container table-responsive">
+      <table style="width:100% " class="table displayTable" >
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Nom</th>
+          <th scope="col" >Score Global</th>
+          <th scope="col" >Accès à l'information</th>
+          <th scope="col">Accès aux interfaces numériques</th>
+          <th scope="col">Compétences administratives</th>
+          <th scope="col">Capacité d'usage des interfaces numériques</th>
+        </tr>
+
+        <tr>
+          <th scope="row">Commune</th>
+          <td>{{ result['Commune'] }}</td>
+          <td>{{ result['Score_global'] }}</td>
+          <td>{{ result['access_interface'] }}</td>
+          <td>{{ result['access_linformation'] }}</td>
+          <td>{{ result['competance_admin'] }}</td>
+          <td>{{ result['competance_numerique'] }}</td>
+
+        </tr>
+        <tr>
+          <th scope="row">Departement</th>
+          <td>{{ result['department'] }}</td>
+          <td>{{ result['dep_score_global'] }}</td>
+          <td>{{ result['dep_access_interface'] }}</td>
+          <td>{{ result['dep_access_linformation'] }}</td>
+          <td>{{ result['dep_competance_admin'] }}</td>
+          <td>{{ result['dep_competance_numerique'] }}</td>
+
+        </tr>
+        <tr>
+          <th scope="row">Region</th>
+          <td>{{ result['nom_de_la_region'] }}</td>
+          <td>{{ result['reg_score_global'] }}</td>
+          <td>{{ result['reg_access_interface'] }}</td>
+          <td>{{ result['reg_access_linformation'] }}</td>
+          <td>{{ result['reg_competance_admin'] }}</td>
+          <td>{{ result['reg_competance_numerique'] }}</td>
+
+        </tr>
+      </table>
+    </section>
+{% endblock %}
+</body>
+</html>
